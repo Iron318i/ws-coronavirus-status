@@ -15,7 +15,7 @@ $gray-900: #2B3940;
 $blue: #3580FB;
 
 $primary: $blue;
-$secondary: $gray-100;
+$secondary: #fff;
 
 
 // Options
@@ -37,9 +37,8 @@ $theme-colors
 $spacer: 2rem;
 // Body
 
-
-
 // Links
+$link-hover-decoration: none;
 // Paragraphs
 // Grid breakpoints
 $grid-breakpoints: (
@@ -57,10 +56,13 @@ lg: 960px,
 xl: 1170px
 );
 // Grid columns
+// Components
+$caret-width: .2em;
 // Fonts
 $font-family-sans-serif:  'Yantramanav', sans-serif;
 
 $font-size-base: 1rem;
+$font-size-lg: $font-size-base;
 
 $font-weight-base : 300;
 $font-weight-bold: 500;
@@ -83,7 +85,13 @@ $headings-margin-bottom: 1rem;
 // Tables
 // Buttons
 // Forms
+$input-font-weight: 400;
 // Dropdowns
+$dropdown-min-width: rem(170px);
+$dropdown-padding-y: 0;
+$dropdown-link-hover-bg: #fff;
+$dropdown-item-padding-y: 10px;
+$dropdown-item-padding-x: 20px;
 // Z-index master list
 // Navs
 // Navbar

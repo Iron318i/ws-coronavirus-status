@@ -4,9 +4,27 @@ html{
 .site-header{
     padding: 10px 0;
 }
+
+/*Card*/
 .card{
     margin: 20px 0;
 }
+.dropdown-divider {
+    margin: 0;
+}
+.dropdown-item {
+    font-weight: 400;
+}
+.card-status{
+    .heading{
+	display: flex;
+	a{
+	    margin-left: .5rem;
+	    border-bottom: 1px dotted;
+	}
+    }
+}
+/**/
 .recent-updates{
     max-width: 650px;
 }
