@@ -25,6 +25,11 @@
 	    order: 4;
 	}
     }
+    .collapse.dont-collapse-sm {
+	display: block;
+	height: auto !important;
+	visibility: visible;
+    }
 }
 @include media-breakpoint-up(lg) {
     .site-header{

@@ -1,6 +1,6 @@
 <% var data = {
 title: "Washington State Coronavirus Status",
-ver: "1.04",
+ver: "1.05",
 }; %>
 <%= _.template(require('./../includes/header.html').default)(data) %>
 
@@ -110,19 +110,24 @@ ver: "1.04",
 	    </div>
 	</div>
 	<div class="col-md-3">
-	    <div class="subscribe">
-		<div class="heading">
-		    <h3>Subscribe</h3>
-		    <p>And get latest updates</p>
+	    <button class="btn btn-primary mobile mb-2" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+		Subscribe
+	    </button>
+	    <div class="collapse dont-collapse-sm" id="collapseExample">
+		<div class="subscribe">
+		    <div class="heading">
+			<h3>Subscribe</h3>
+			<p>And get latest updates</p>
+		    </div>
+		    <div class="form-group mb-0">
+			<input class="form-control form-control-lg" type="Email" placeholder="Email">
+		    </div>
+		    <div class="separate"><span>or/and</span></div>
+		    <div class="form-group">
+			<input class="form-control form-control-lg" type="text" placeholder="Phone">
+		    </div>
+		    <button type="submit" class="btn btn-block btn-lg btn-primary" disabled data-toggle="modal" data-target=".modal-thank">Subscribe</button>
 		</div>
-		<div class="form-group mb-0">
-		    <input class="form-control form-control-lg" type="Email" placeholder="Email">
-		</div>
-		<div class="separate"><span>or/and</span></div>
-		<div class="form-group">
-		    <input class="form-control form-control-lg" type="text" placeholder="Phone">
-		</div>
-		<button type="submit" class="btn btn-block btn-lg btn-primary" disabled data-toggle="modal" data-target=".modal-thank">Subscribe</button>
 	    </div>
 	</div>
     </div>
