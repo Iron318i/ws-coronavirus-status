@@ -4,21 +4,25 @@ title: "Washington State Coronavirus Status"
 <%= _.template(require('./../includes/header.html').default)(data) %>
 
 <div class="container">
-
+    <h1 class="mb-lg-4">Washington State Coronavirus Status</h1>
     <div class="row">
-	<div class="col-md-4 order-md-1">
-	    <h3>Subscribe</h3>
-	    <p>And get latest updates</p>
-	    <div class="form-group">
-		<input class="form-control form-control-lg" type="Email" placeholder="Email">
+	<div class="col-md-3 order-md-1">
+	    <div class="subscribe">
+		<div class="heading">
+		    <h3>Subscribe</h3>
+		    <p>And get latest updates</p>
+		</div>
+		<div class="form-group mb-0">
+		    <input class="form-control form-control-lg" type="Email" placeholder="Email">
+		</div>
+		<div class="separate"><span>or/and</span></div>
+		<div class="form-group">
+		    <input class="form-control form-control-lg" type="text" placeholder="Phone">
+		</div>
+		<button type="submit" class="btn btn-block btn-lg btn-primary">Subscribe</button>
 	    </div>
-	    <div class="form-group">
-		<input class="form-control form-control-lg" type="text" placeholder="Phone">
-	    </div>
-	    <button type="submit" class="btn btn-block btn-lg btn-primary">Subscribe</button>
 	</div>
-	<div class="col-md-8 order-md-0">
-	    <h1>Washington State Coronavirus Status</h1>
+	<div class="col-md-9 order-md-0">
 	    <div class="card card-status">
 		<div class="card-body">
 		    <div class="dropdown heading">
@@ -34,33 +38,39 @@ title: "Washington State Coronavirus Status"
 			<form>
 			    <div class="form-row align-items-center">
 				<div class="col-auto">
-				    <label for="selectCounty">County:</label>
-				    <select id="selectCounty" class="form-control">
-					<option selected>All Counties</option>
-					<option>Adams County</option>
-					<option>Asotin County</option>
-					<option>Benton County</option>
-					<option>Chelan County</option>
-				    </select>
+				    <div class="form-group">
+					<label for="selectCounty">County:</label>
+					<select id="selectCounty" class="form-control">
+					    <option selected>All Counties</option>
+					    <option>Adams County</option>
+					    <option>Asotin County</option>
+					    <option>Benton County</option>
+					    <option>Chelan County</option>
+					</select>
+				    </div>
 				</div>
 				<div class="col-auto">
-				    <label for="selectAge">Age:</label>
-				    <select id="selectAge" class="form-control">
-					<option selected>18-24</option>
-					<option>24-30</option>
-					<option>30-40</option>
-					<option>40-50</option>
-					<option>50-60</option>
-					<option>60-70</option>
-					<option>70+</option>
-				    </select>
+				    <div class="form-group">
+					<label for="selectAge">Age:</label>
+					<select id="selectAge" class="form-control">
+					    <option selected>18-24</option>
+					    <option>24-30</option>
+					    <option>30-40</option>
+					    <option>40-50</option>
+					    <option>50-60</option>
+					    <option>60-70</option>
+					    <option>70+</option>
+					</select>
+				    </div>
 				</div>
 				<div class="col-auto">
-				    <label for="selectSex">Sex:</label>
-				    <select id="selectSex" class="form-control">
-					<option selected>Women</option>
-					<option>Men</option>
-				    </select>
+				    <div class="form-group">
+					<label for="selectSex">Sex:</label>
+					<select id="selectSex" class="form-control">
+					    <option selected>Women</option>
+					    <option>Men</option>
+					</select>
+				    </div>
 				</div>
 			    </div>
 			</form>
