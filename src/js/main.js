@@ -18,6 +18,29 @@
 	$('.subscribe .btn').prop("disabled", false);
     });
 
+
+    Chart.plugins.register({
+	afterDatasetsDraw: function (chart) {
+	    if (chart.tooltip._active && chart.tooltip._active.length) {
+		var activePoint = chart.tooltip._active[0],
+			ctx = chart.ctx,
+			y_axis = chart.scales['y-axis-0'],
+			x = activePoint.tooltipPosition().x,
+			topY = y_axis.top,
+			bottomY = y_axis.bottom;
+		// draw line
+		ctx.save();
+		ctx.beginPath();
+		ctx.moveTo(x, topY);
+		ctx.lineTo(x, bottomY);
+		ctx.lineWidth = 1;
+		ctx.strokeStyle = '#B3BDD1';
+		ctx.stroke();
+		ctx.restore();
+	    }
+	}
+    });
+
     var ctx = document.getElementById('chartStatus').getContext('2d');
 
     var gradientFill = ctx.createLinearGradient(0, 500, 0, 0);
