@@ -58,6 +58,10 @@ xl: 1170px
 // Grid columns
 // Components
 $caret-width: .2em;
+
+$border-radius:  3px;
+$border-radius-lg: 3px;
+
 // Fonts
 $font-family-sans-serif:  'Yantramanav', sans-serif;
 
@@ -86,6 +90,10 @@ $headings-margin-bottom: 1rem;
 // Buttons
 // Forms
 $input-font-weight: 400;
+$input-border-color: #E3E6EB;
+
+$input-btn-padding-y: rem(7px);
+$input-padding-x:  rem(15px);
 // Dropdowns
 $dropdown-min-width: rem(170px);
 $dropdown-padding-y: 0;

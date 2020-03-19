@@ -1,6 +1,17 @@
 html{
     font-size: 14px;;
 }
+label{
+    font-weight: 400;
+}
+select.form-control{
+    option{
+	font-weight: 300;
+    }
+    option:checked {
+	font-weight: 400;
+    }
+}
 .site-header{
     padding: 10px 0;
 }
@@ -21,6 +32,16 @@ html{
 	a{
 	    margin-left: .5rem;
 	    border-bottom: 1px dotted;
+	}
+    }
+}
+.filters{
+    .col-auto{
+	display: flex;
+	align-items: center;
+	label{
+	    margin-bottom: 0;
+	    margin-right: 5px;
 	}
     }
 }
