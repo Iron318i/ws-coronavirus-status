@@ -1,7 +1,21 @@
 html{
     font-size: 14px;;
 }
+.site-header{
+    padding: 10px 0;
+}
 
+.card{
+    margin: 20px 0;
+}
+
+.copy{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: $gray-400;
+    font-weight: 400;
+}
 #toTop{
     position: fixed;
     z-index: 200;

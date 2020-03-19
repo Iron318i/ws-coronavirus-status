@@ -7,6 +7,7 @@
 //
 // Color system
 $gray-100: #fbf7f0;
+$gray-400: #BFC8CC;
 $gray-900: #2B3940;
 
 
@@ -28,6 +29,8 @@ $theme-colors: map-merge(
 ),
 $theme-colors
 );
+
+
 
 // Spacing
 $spacer: 2rem;
@@ -64,8 +67,8 @@ $font-weight-bolder: $font-weight-bold;
 
 $font-weight-normal: 300;
 
-$h1-font-size: rem(40px);
-$h2-font-size: rem(40px);
+$h1-font-size: rem(30px);
+$h2-font-size: rem(24px);
 $h3-font-size: rem(36px);
 $h4-font-size: rem(18px);
 $h5-font-size: $font-size-base * 1.25;

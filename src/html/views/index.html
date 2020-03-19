@@ -1,10 +1,20 @@
 <% var data = {
-  title: "Washington State Coronavirus Status"
+title: "Washington State Coronavirus Status"
 }; %>
 <%= _.template(require('./../includes/header.html').default)(data) %>
 
 <div class="container">
     <h1>Washington State Coronavirus Status</h1>
+
+    <div class="card">
+	<div class="card-body">
+	    This is some text within a card body.
+	</div>
+    </div>
+    
+    <div class="recent-updates">
+	<h2>Recent Updates</h2>
+    </div>
 </div>
 
 <%= _.template(require('./../includes/footer.html').default)(data) %>
