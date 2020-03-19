@@ -68,11 +68,11 @@
 		    }]
 	    },
 	    tooltips: {
-		mode: 'index',
+		mode: 'x-axis',
 		intersect: false
 	    },
 	    hover: {
-		mode: 'index',
+		mode: 'x-axis',
 		intersect: false
 	    },
 	    elements: {
