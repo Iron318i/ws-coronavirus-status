@@ -22,7 +22,7 @@
 
     var gradientFill = ctx.createLinearGradient(0, 500, 0, 0);
     gradientFill.addColorStop(0, "rgba(239, 244, 255, 0)");
-    gradientFill.addColorStop(1, "#EFF4FF");
+    gradientFill.addColorStop(1, "#f0f5ff");
 
     var chart = new Chart(ctx, {
 	// The type of chart we want to create
@@ -37,7 +37,7 @@
 		    borderWidth: 2,
 		    //  label: '',
 		    backgroundColor: gradientFill,
-		    borderColor: '#3580FB',
+		    borderColor: '#3580fb',
 		    data: [31000, 26000, 40000, 43000, 33000, 31000, 22000, 26000, 38000, 45000, 41000, 31000, 26000, 20000, 39000, 31000, 49000, 55000, 60000],
 		}]
 	},
