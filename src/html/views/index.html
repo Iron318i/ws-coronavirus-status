@@ -4,45 +4,72 @@ title: "Washington State Coronavirus Status"
 <%= _.template(require('./../includes/header.html').default)(data) %>
 
 <div class="container">
-    <h1>Washington State Coronavirus Status</h1>
 
-    <div class="card">
-	<div class="card-body">
-	    This is some text within a card body.
+    <div class="row">
+	<div class="col-md-4 order-md-1">
+	    <h3>Subscribe</h3>
+	    <p>And get latest updates</p>
+	    <div class="form-group">
+		<input class="form-control form-control-lg" type="Email" placeholder="Email">
+	    </div>
+	    <div class="form-group">
+		<input class="form-control form-control-lg" type="text" placeholder="Phone">
+	    </div>
+	    <button type="submit" class="btn btn-block btn-lg btn-primary">Subscribe</button>
+	</div>
+	<div class="col-md-8 order-md-0">
+	    <h1>Washington State Coronavirus Status</h1>
+	    <div class="card">
+		<div class="card-body">
+		    <div class="dropdown">
+			<h2>Amount of confirmed
+			</h2>
+			<a href="#" class="h2 dropdown-toggle" id="amount-confirmed" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Infected</a>
+			<div class="dropdown-menu" aria-labelledby="amount-confirmed">
+			    <button class="dropdown-item" type="button">infected</button>
+			    <div class="dropdown-divider"></div>
+			    <button class="dropdown-item" type="button">Deaths</button>
+			</div>
+		    </div>
+		    <div class="filters">
+			<form>
+			    <div class="form-row align-items-center">
+				<div class="col-auto">
+				    <label for="selectCounty">County:</label>
+				    <select id="selectCounty" class="form-control">
+					<option selected>All Counties</option>
+					<option>Adams County</option>
+					<option>Asotin County</option>
+					<option>Benton County</option>
+					<option>Chelan County</option>
+				    </select>
+				</div>
+				<div class="col-auto">
+				    <label for="selectAge">Age:</label>
+				    <select id="selectAge" class="form-control">
+					<option selected>18-24</option>
+					<option>24-30</option>
+					<option>30-40</option>
+					<option>40-50</option>
+					<option>50-60</option>
+					<option>60-70</option>
+					<option>70+</option>
+				    </select>
+				</div>
+				<div class="col-auto">
+				    <label for="selectSex">Sex:</label>
+				    <select id="selectSex" class="form-control">
+					<option selected>Women</option>
+					<option>Men</option>
+				    </select>
+				</div>
+			    </div>
+			</form>
+		    </div>
+		</div>
+	    </div>
+	    <%= _.template(require('./../includes/recent-updates.html').default)(data) %>
 	</div>
     </div>
-    
-    <div class="recent-updates">
-	<h2 class="mb-lg-3">Recent Updates</h2>
-	<div class="date mb-lg-3">March 17, 2020</div>
-	<article class="post mb-lg-4">
-	    <h3>Jared Leto was on a retreat and missed the coronavirus news</h3>
-	    <p>Jared Leto being on a silent meditation retreat and totally missing out on the coronavirus pandemic news feels very Jared Leto.</p>
-	    <p><a href="#">Read more</a></p>
-	</article>
-	<article class="post mb-lg-4">
-	    <h3>Markets Hit New Lows Again Despite Planned Fed Intervention</h3>
-	    <p>After attempting a strong rebound on Friday, where equities climbed nearly 10%, markets gave back all those gains and more, to fall below the lows of Friday after the Federal Reserve initiated a massive monetary stimulus campaign...</p>
-	    <p><a href="#">Read more</a></p>
-	</article>
-	<div class="date mb-lg-3">March 16, 2020</div>
-	<article class="post mb-lg-4">
-	    <h3>Jared Leto was on a retreat and missed the coronavirus news</h3>
-	    <p>Jared Leto being on a silent meditation retreat and totally missing out on the coronavirus pandemic news feels very Jared Leto.</p>
-	    <p><a href="#">Read more</a></p>
-	</article>
-	<article class="post mb-lg-4">
-	    <h3>Markets Hit New Lows Again Despite Planned Fed Intervention</h3>
-	    <p>After attempting a strong rebound on Friday, where equities climbed nearly 10%, markets gave back all those gains and more, to fall below the lows of Friday after the Federal Reserve initiated a massive monetary stimulus campaign...</p>
-	    <p><a href="#">Read more</a></p>
-	</article>
-	<div class="date mb-lg-3">March 15, 2020</div>
-	<article class="post mb-lg-4">
-	    <h3>Jared Leto was on a retreat and missed the coronavirus news</h3>
-	    <p>Jared Leto being on a silent meditation retreat and totally missing out on the coronavirus pandemic news feels very Jared Leto.</p>
-	    <p><a href="#">Read more</a></p>
-	</article>
-    </div>
 </div>
-
 <%= _.template(require('./../includes/footer.html').default)(data) %>
