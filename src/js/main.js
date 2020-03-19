@@ -19,6 +19,19 @@
     });
 
 
+    function addCommas(nStr)
+    {
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1)) {
+	    x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	}
+	return x1 + x2;
+    }
+
     Chart.plugins.register({
 	afterDatasetsDraw: function (chart) {
 	    if (chart.tooltip._active && chart.tooltip._active.length) {
@@ -79,7 +92,13 @@
 			    fontColor: "#939EAE",
 			    fontSize: 12,
 			    stepSize: 10000,
-			    beginAtZero: true
+			    beginAtZero: true,
+			    callback: function (value, index, values) {
+				return addCommas(value);
+			    }
+			},
+			gridLines: {
+			    color: "rgba(227, 230, 235, 0.5)"
 			}
 		    }],
 		xAxes: [{
@@ -107,7 +126,7 @@
 		callbacks: {
 		    // use label callback to return the desired label
 		    label: function (tooltipItem, data) {
-			return tooltipItem.yLabel + " " + tooltipItem.xLabel + ", 2020 ";
+			return  addCommas(tooltipItem.yLabel) + " " + tooltipItem.xLabel + ", 2020 ";
 		    },
 		    // remove title
 		    title: function (tooltipItem, data) {
