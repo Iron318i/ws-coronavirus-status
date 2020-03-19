@@ -4,11 +4,24 @@ html{
 .site-header{
     padding: 10px 0;
 }
-
 .card{
     margin: 20px 0;
 }
-
+.recent-updates{
+    max-width: 650px;
+}
+.date{
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    color: $gray-500;
+    border-bottom: 1px solid #E3E6EB;
+}
+.post{
+    max-width: 560px;
+    a{
+	font-weight: 500;
+    }
+}
 .copy{
     text-align: center;
     margin-top: 2rem;
