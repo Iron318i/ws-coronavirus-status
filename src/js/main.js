@@ -33,7 +33,8 @@
 		ctx.beginPath();
 		ctx.moveTo(x, topY);
 		ctx.lineTo(x, bottomY);
-		ctx.lineWidth = 1;
+		ctx.setLineDash([2, 2]);
+		ctx.lineWidth = 2;
 		ctx.strokeStyle = '#B3BDD1';
 		ctx.stroke();
 		ctx.restore();
@@ -87,12 +88,35 @@
 			    fontSize: 12,
 			    stepSize: 5,
 			    beginAtZero: true
+			},
+			gridLines: {
+			    display: false
 			}
 		    }]
 	    },
 	    tooltips: {
 		mode: 'x-axis',
-		intersect: false
+		intersect: false,
+		backgroundColor: '#fff',
+		custom: function (tooltip) {
+		    if (!tooltip)
+			return;
+		    // disable displaying the color box;
+		    tooltip.displayColors = false;
+		},
+		callbacks: {
+		    // use label callback to return the desired label
+		    label: function (tooltipItem, data) {
+			return tooltipItem.yLabel + " " + tooltipItem.xLabel + ", 2020 ";
+		    },
+		    // remove title
+		    title: function (tooltipItem, data) {
+			return;
+		    },
+		    labelTextColor: function (tooltipItem, chart) {
+			return '#2B3940';
+		    }
+		}
 	    },
 	    hover: {
 		mode: 'x-axis',
