@@ -1,0 +1,103 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+
+// Table of Contents
+//
+// Color system
+$gray-100: #fbf7f0;
+
+
+$blue: #1d2c34;
+
+$primary: $blue;
+$secondary: $gray-100;
+
+
+// Options
+//$enable-rounded: false;
+
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+(
+"primary":    $primary,
+"secondary":  $secondary,
+),
+$theme-colors
+);
+
+// Spacing
+$spacer: 2rem;
+// Body
+$body-color: $blue;
+// Links
+// Paragraphs
+// Grid breakpoints
+$grid-breakpoints: (
+xs: 0,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px
+);
+// Grid containers
+$container-max-widths: (
+sm: 540px,
+md: 720px,
+lg: 960px,
+xl: 1170px
+);
+// Grid columns
+// Fonts
+$font-family-sans-serif:  'Yantramanav', sans-serif;
+
+$font-size-base: 1rem;
+
+$font-weight-base : 300;
+$font-weight-bold: 500;
+$font-weight-bolder: $font-weight-bold;
+
+$font-weight-normal: 300;
+
+$h1-font-size: rem(40px);
+$h2-font-size: rem(40px);
+$h3-font-size: rem(36px);
+$h4-font-size: rem(18px);
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base ;
+
+$headings-font-weight: 500;
+
+$headings-margin-bottom: 1rem;
+
+// Components
+// Tables
+// Buttons
+// Forms
+// Dropdowns
+// Z-index master list
+// Navs
+// Navbar
+// Pagination
+// Jumbotron
+// Form states and alerts
+// Cards
+// Tooltips
+// Popovers
+// Badges
+// Modals
+// Alerts
+// Progress bars
+// List group
+// Image thumbnails
+// Figures
+// Breadcrumbs
+// Carousel
+// Close
+// Code
+
+$dot-width: rem(18px);
+$dot-height: rem(18px);
+$dot-background-active: $blue;
