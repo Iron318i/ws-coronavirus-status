@@ -14,4 +14,8 @@
     });
 
 
+    $('.subscribe .form-control').focus(function () {
+	$('.subscribe .btn').prop("disabled", false);
+    });
+
 }(jQuery);
