@@ -4,6 +4,27 @@
     .site-header{
 	padding: 30px 0;
     }
+    .mobile{
+	display: none;
+    }
+    .card-status{
+	.card-body{
+	    display: flex;
+	    flex-direction: column;
+	}
+	.heading{
+	    order: 1;
+	}
+	.filters{
+	    order: 2;
+	}
+	.time-scale{
+	    order: 3;
+	}
+	.chart-wrp{
+	    order: 4;
+	}
+    }
 }
 @include media-breakpoint-up(lg) {
     .site-header{
@@ -23,7 +44,21 @@
     .h2, h2 {
 	font-size: 1.5rem;
     }
-    .filters .list-group .list-group-item{
-	padding: 5px;
+    .desktop{
+	display: none;
+    }
+    .filters{
+	margin-top: 1rem;
+	.list-group .list-group-item{
+	    padding: 5px;
+	}
+    }
+    .page-title{
+	display: none;
+    }
+    .card-status{
+	.card-body {
+	    padding: .25rem;
+	}
     }
 }

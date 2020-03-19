@@ -1,29 +1,13 @@
 <% var data = {
 title: "Washington State Coronavirus Status",
-ver: "1.03",
+ver: "1.04",
 }; %>
 <%= _.template(require('./../includes/header.html').default)(data) %>
 
 <div class="container">
-    <h1 class="mb-lg-4">Washington State Coronavirus Status</h1>
+    <h1 class="page-title mb-lg-4">Washington State Coronavirus Status</h1>
     <div class="row">
-	<div class="col-md-3 order-md-1">
-	    <div class="subscribe">
-		<div class="heading">
-		    <h3>Subscribe</h3>
-		    <p>And get latest updates</p>
-		</div>
-		<div class="form-group mb-0">
-		    <input class="form-control form-control-lg" type="Email" placeholder="Email">
-		</div>
-		<div class="separate"><span>or/and</span></div>
-		<div class="form-group">
-		    <input class="form-control form-control-lg" type="text" placeholder="Phone">
-		</div>
-		<button type="submit" class="btn btn-block btn-lg btn-primary" disabled data-toggle="modal" data-target=".modal-thank">Subscribe</button>
-	    </div>
-	</div>
-	<div class="col-md-9 order-md-0">
+	<div class="col-md-9">
 	    <div class="card card-status">
 		<div class="card-body">
 		    <div class="dropdown heading">
@@ -34,6 +18,17 @@ ver: "1.03",
 			    <div class="dropdown-divider"></div>
 			    <button class="dropdown-item" type="button">Deaths</button>
 			</div>
+		    </div>
+		    <div class="list-group list-group-horizontal time-scale">
+			<button type="button" class="list-group-item list-group-item-action active">1 <span class="desktop">week</span><span class="mobile">w</span></button>
+			<button type="button" class="list-group-item list-group-item-action">2 <span class="desktop">week</span><span class="mobile">w</span></button>
+			<button type="button" class="list-group-item list-group-item-action">3 <span class="desktop">week</span><span class="mobile">w</span></button>
+			<button type="button" class="list-group-item list-group-item-action">1 <span class="desktop">month</span><span class="mobile">m</span></button>
+			<button type="button" class="list-group-item list-group-item-action">2 <span class="desktop">month</span><span class="mobile">m</span></button>
+			<button type="button" class="list-group-item list-group-item-action">3 <span class="desktop">month</span><span class="mobile">m</span></button>
+		    </div>
+		    <div class="chart-wrp">
+			<canvas id="chartStatus" height="350"></canvas>
 		    </div>
 		    <div class="filters">
 			<form>
@@ -110,23 +105,28 @@ ver: "1.03",
 				</div>
 			    </div>
 			</form>
-			<div class="list-group list-group-horizontal-md">
-			    <button type="button" class="list-group-item list-group-item-action active">1 week</button>
-			    <button type="button" class="list-group-item list-group-item-action">2 week</button>
-			    <button type="button" class="list-group-item list-group-item-action">3 week</button>
-			    <button type="button" class="list-group-item list-group-item-action">1 month</button>
-			    <button type="button" class="list-group-item list-group-item-action">2 month</button>
-			    <button type="button" class="list-group-item list-group-item-action">3 month</button>
-			</div>
-		    </div>
-		    <div class="chart-wrp">
-			<canvas id="chartStatus" height="350"></canvas>
 		    </div>
 		</div>
 	    </div>
-	    <%= _.template(require('./../includes/recent-updates.html').default)(data) %>
+	</div>
+	<div class="col-md-3">
+	    <div class="subscribe">
+		<div class="heading">
+		    <h3>Subscribe</h3>
+		    <p>And get latest updates</p>
+		</div>
+		<div class="form-group mb-0">
+		    <input class="form-control form-control-lg" type="Email" placeholder="Email">
+		</div>
+		<div class="separate"><span>or/and</span></div>
+		<div class="form-group">
+		    <input class="form-control form-control-lg" type="text" placeholder="Phone">
+		</div>
+		<button type="submit" class="btn btn-block btn-lg btn-primary" disabled data-toggle="modal" data-target=".modal-thank">Subscribe</button>
+	    </div>
 	</div>
     </div>
+    <%= _.template(require('./../includes/recent-updates.html').default)(data) %>
 </div>
 <%= _.template(require('./../includes/modal.html').default)(data) %>
 <%= _.template(require('./../includes/footer.html').default)(data) %>
